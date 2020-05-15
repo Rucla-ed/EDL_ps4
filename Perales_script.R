@@ -6,10 +6,13 @@
 ## [ INIT ] < 4/25/2020 >
 ##
 ################################################################################
+#Grade: 20/20
+#Good job Lorraine
+
 #rkey
 sc_key('AdHIjk1j7sA2LaLO3xsHkea6bLBCAQgUYpYbpODW')
 
-
+# Part I (2 pts)
 ## ---------------------------
 ## libraries
 
@@ -30,6 +33,7 @@ plots_dir <- file.path('~','R','RClass2', 'Week_4', 'HW', 'EDL_ps4', 'plots')
 
 ## ---------------------------
 
+## Part II - College Scorecard API (5 pts)
 ## -----------------------------------------------------------------------------
 ## Part 2 - Label each question using comments
 
@@ -89,6 +93,7 @@ full_df <- full_df %>% mutate(school_type = recode(control,
 
 saveRDS(full_df, file.path(data_dir, "perales_rsscorecard.RDS"))
 
+## Part III - ggplot (6 pts)
 ## -----------------------------------------------------------------------------
 # PART 3
 # 
@@ -145,7 +150,7 @@ ggplot(full_df, aes(x = st_fips, y = (tuitionfee_diff_pct*.10), fill = forcats::
 
 saveRDS(full_df, file.path(plots_dir, "diff_in_tuition_by_state.png"))  
 
-
+## Part IV - Pull request (4 pts)
 ## Part IV 
 
 # 2. Use the `rscorecard` package to pull any data you'd like. Save the data in a file called `<last_name>_custom.RDS` in the `data_dir`.
@@ -176,11 +181,12 @@ ggplot(data= LP_df, aes(x = pct_black, y = loan_wdraw_orig_yr3_rt)) + geom_point
 saveRDS(LP_custom, file.path(plots_dir, "LP_custom.png"))
 
 
-
+## Part V - I got issues (2 pts)
 #ISSUE
 #https://github.com/Rucla-ed/rclass2/issues/88#issue-608087527
 
 
+## Part VI - Wrapping up (1 pt)
 # spent 6 hours working on this pset
 
 ## -----------------------------------------------------------------------------
