@@ -5,6 +5,10 @@
 ## [ INIT ] < May 1 2020>
 ## [Key] < jtgi1g4pgbfaqcvH7xet4txk5ABUOiijdfJ7FWWT
 ################################################################################
+#Grade: 19.5/20
+#Good job Estefania
+
+# Part I (2 pts)
 
 ## ---------------------------
 ## libraries
@@ -19,7 +23,7 @@ data_dir<- setwd("/Users/andromeda/EDL_ps4/data/")
 plot_dir <- setwd("/Users/andromeda/EDL_ps4/plots/")
 
 ## -----------------------------------------------------------------------------
-## Part X - Label each question using comments
+## Part II - College Scorecard API (5 pts)
 ## -----------------------------------------------------------------------------
 
 #install
@@ -58,7 +62,7 @@ df <- df %>% mutate (school_type = recode(control,
 
 saveRDS(df, file.path(data_dir, "ecp.RDS"))
 
-
+## Part III - ggplot (6 pts)
 ### ggplot code
 
 df_plot<-ggplot(data= df, aes(x = tuitionfee_out, y = md_earn_wne_p10, color= as.factor(school_type))) + geom_point() + geom_smooth() + ylab("median earnings") + xlab("out state tuition")
@@ -83,7 +87,7 @@ df_plot3<-ggplot(public_school_only, aes(x = st_fips, y = tuitionfee_diff_pct *-
 saveRDS(df_plot3, file.path(plot_dir, "ecpplot3.png"))
 
 
-
+## Part IV - Pull request (4 pts)
 ### Part IV
 
 df <- sc_init() %>% 
@@ -108,11 +112,13 @@ ggplot(data= df_ecp, aes(x = pct_hispanic, y = first_gen)) + geom_point() + geom
 
 saveRDS(df_ecp, file.path(plot_dir, "ecp_custom.png"))
 
-
+## Part V - I got issues (2 pts)
 ##Issue2
 
 #https://github.com/Rucla-ed/rclass2/issues/101
 
+## Part VI - Wrapping up (.5 pt)
+# Don't forget to answer part VI please. 
 ## -----------------------------------------------------------------------------
 ## END SCRIPT
 ## -----------------------------------------------------------------------------
